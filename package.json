@@ -1,0 +1,23 @@
+{
+  "name": "node-api-shop",
+  "version": "1.0.0",
+  "description": "a simple shopping api with node",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "josh ludahl",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^2.0.1",
+    "body-parser": "^1.18.2",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "jsonwebtoken": "^8.2.1",
+    "mongodb": "^3.0.7",
+    "mongoose": "^5.0.17",
+    "morgan": "^1.9.0",
+    "multer": "^1.3.0",
+    "nodemon": "^1.17.4"
+  }
+}
