@@ -6,9 +6,14 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const jwt = require('jsonwebtoken');
 
+// Set View Engine to EJS
+app.set('view engine', 'ejs');
+
 //  connect to database
-const mongoURI = "mongodb://" +process.env.MONGO_USER+ ":"+ process.env.MONGO_ATLAS_PW + "@cluster0-shard-00-00-zapnu.mongodb.net:27017,cluster0-shard-00-01-zapnu.mongodb.net:27017,cluster0-shard-00-02-zapnu.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin"
-mongoose.connect(mongoURI);
+require('./db/db')
+
+
+
 
 //  ENABLE LOGGING
 app.use(morgan('dev'));
@@ -38,6 +43,9 @@ app.use('/products', productRoutes);
 //      ORDERS ROUTE
 const ordersRoutes = require('./api/routes/orders');
 app.use('/orders', ordersRoutes);
+
+const indexRoutes = require('./api/routes/index');
+app.use('/', indexRoutes);
 
 //      USER ROUTE
 const userRoutes = require('./api/routes/user');
