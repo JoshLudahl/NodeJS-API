@@ -4,20 +4,21 @@
   "description": "a simple shopping api with node",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
   },
   "author": "josh ludahl",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^3.0.6",
     "body-parser": "^1.19.0",
-    "ejs": "^2.6.1",
-    "express": "^4.16.4",
+    "ejs": "^2.6.2",
+    "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
-    "mongodb": "^3.2.3",
-    "mongoose": "^5.5.4",
+    "mongodb": "^3.2.7",
+    "mongoose": "^5.6.4",
     "morgan": "^1.9.1",
     "multer": "^1.4.1",
-    "nodemon": "^1.18.11"
+    "nodemon": "^1.19.1"
   }
 }
